@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="jquery"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +17,11 @@
 
 
     <div class="form-container">
-        <form action="#" method="post">
+        <form action="" id=""spawn>
             <label for="pseudo">ENTRER VOTRE PSEUDO </label>
             <input type="text" id="pseudo" name="pseudo" required>
+            <input type="submit" value="Lancer la partie" class="start-button"/>  
+
         </form>
     </div>
     <button type="button" class="start-button">Lancer la partie</button>
