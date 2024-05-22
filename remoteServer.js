@@ -5,15 +5,15 @@ var io = require('socket.io')(http);
 
 var count = 0
 
+app.use(express.static(__dirname + '/public'));//allows access to public directory
 
-
-app.use(express.static('public'));
 
 app.get('/jquery', function(req, res){
 	count++;
 	res.sendFile(__dirname + '/jquery-3.6.4.min.js');
 	//
 });
+
 var userId = 0;
 
 io.on('connection', function(socket){
