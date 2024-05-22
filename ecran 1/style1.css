@@ -8,10 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('images/sushi.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #582F16;
 }
 
 
@@ -23,7 +20,7 @@ form {
 label {
     margin-bottom: 10px;
     font-size: 1.2em;
-    color: #333;
+    color: #ffffff;
 }
 
 input {
@@ -54,11 +51,11 @@ button:hover {
 /* the start button */
 .start-button {
     margin-top: 20px;
-    background-color: #28a745;
+    background-color: #E77E51;
 }
 
 .start-button:hover {
-    background-color: #606C38;
+    background-color: #d7d7d7;
 }
 
 
