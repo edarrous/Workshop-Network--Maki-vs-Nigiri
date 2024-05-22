@@ -26,6 +26,12 @@ io.on('connection', function(socket){
 		io.emit("spawn",msg.pseudo);
   });
   
+  socket.on('spawn2', function(msg){
+	//msg = JSON.parse(msg);
+	console.log('message from user ' + msg.pseudo);
+	io.emit("spawn2",msg.pseudo);
+});
+
   socket.on('input1', function(msg){
 		console.log(msg);
 		//msg = JSON.parse(msg);
