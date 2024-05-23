@@ -1,63 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maki vs Nigiri</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="jquery"></script>
+	<script>
+		$(function () {
+		  var socket = io();
+	  
+		  const baseUrl = window.location.href;
+		  const splitUrl = baseUrl.split("=");
+		  const id = splitUrl[1];
+	  
+		  console.log(id);
+	  
+		  socket.emit("playerReady",id);
+		  
+	  
+		  $('#up').submit(function(){
+			  console.log("up pressed");
+			  socket.emit('up', id);
+			  return false;
+		  });
+			  
+		  $('#down').submit(function(){
+			  console.log("down pressed");
+			  socket.emit('down', id);
+			  return false;
+		  });
+		  
+		$('#left').submit(function(){
+			  console.log("left pressed");
+			  socket.emit('left', id);
+			  return false;
+		  });
+	  
+		$('#right').submit(function(){
+			  console.log("right pressed");
+			  socket.emit('right', id);
+			  return false;
+		  });
+	  
+		$('#jump').submit(function(){
+			  console.log("jump pressed");
+			  socket.emit('jump', id);
+			  return false;
+		  });
+	  
+		  socket.on('chat', function(data){
+			$('#messages').append($('<li>').text("user#" + data.id + ": " + data.msg));
+		  });
+		});
+	  </script>
+</head>
 
-<script src="/socket.io/socket.io.js"></script>
-<script src="jquery"></script>
 
-<script>
-  $(function () {
-    var socket = io();
-
-	
-	const baseUrl = window.location.href;
-	const splitUrl = baseUrl.split("=");
-	const id = splitUrl[1];
-
-	console.log(id);
-
-	socket.emit("playerReady",id);
-	
-	// if(id == 1){
-	// 	socket.emit(connectPlayer1);
-	// }
-
-	$('#up').submit(function(){
-		console.log("up pressed");
-		socket.emit('up', id);
-		return false;
-	});
-		
-	$('#down').submit(function(){
-		console.log("input down pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('down', JSON.parse(msg));
-		return false;
-	});
-	
-  $('#left').submit(function(){
-		console.log("input left pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('left', JSON.parse(msg));
-		return false;
-	});
-
-  $('#right').submit(function(){
-		console.log("input right pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('right', JSON.parse(msg));
-		return false;
-	});
-
-  $('#jump').submit(function(){
-		console.log("input jump pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('jump', JSON.parse(msg));
-		return false;
-	});
-
-    socket.on('chat', function(data){
-      $('#messages').append($('<li>').text("user#" + data.id + ": " + data.msg));
-    });
-  });
-</script>
 <body>
 
 <form action="" id="spawn">
@@ -86,3 +85,4 @@
 </form>
 
 </body>
+</html>

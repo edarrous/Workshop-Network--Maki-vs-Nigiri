@@ -25,14 +25,6 @@ io.on('connection', function(socket){
   socket.userId = userId ++;
 
   console.log('a user connected, user id: ' + socket.userId);
-
-
-  socket.on('spawn', function(msg){
-		//msg = JSON.parse(msg);
-		console.log('message from user ' + msg.pseudo);
-		io.emit("spawn",msg.pseudo);
-  });
-
   
   
   socket.on('launch', function(){
@@ -78,27 +70,27 @@ socket.on('connectPlayer1', function(msg){
   });
   
   socket.on('down', function(msg){
-		//msg = JSON.parse(msg);
-		console.log('user ' + msg.pseudo+" has pressed down");
-		io.emit("down",msg.pseudo);
-  });
-  
-  socket.on('right', function(msg){
-	//msg = JSON.parse(msg);
-	console.log('user ' + msg.pseudo+" has pressed right");
-	io.emit("right",msg.pseudo);
+	const id = msg;
+	console.log("joueur "+id +" user has pressed up");
+	io.emit("down"+id);
+});
+
+socket.on('right', function(msg){
+	const id = msg;
+	console.log("joueur "+id +" user has pressed up");
+	io.emit("right"+id);
 });
 
 socket.on('left', function(msg){
-	//msg = JSON.parse(msg);
-	console.log('user ' + msg.pseudo+" has pressed left");
-	io.emit("left",msg.pseudo);
+	const id = msg;
+	console.log("joueur "+id +" user has pressed up");
+	io.emit("left"+id);
 });
 
 socket.on('jump', function(msg){
-	//msg = JSON.parse(msg);
-	console.log('user ' + msg.pseudo+" has pressed jump");
-	io.emit("jump",msg.pseudo);
+	const id = msg;
+	console.log("joueur "+id +" user has pressed up");
+	io.emit("jump"+id);
 });
 
 });
