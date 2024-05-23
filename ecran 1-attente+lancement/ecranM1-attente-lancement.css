@@ -9,35 +9,30 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #582F16;
+    
 }
 
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 10px;
-    font-size: 1.2em;
+.text {
     color: #ffffff;
 }
 
-input {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    width: 100%;
-    box-sizing: border-box; 
+.loader {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 button {
     padding: 15px;
     font-size: 1.2em;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #E77E51;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -45,24 +40,17 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #c9c9c9;
 }
 
-/* the start button */
-.start-button {
-    margin-top: 20px;
-    background-color: #E77E51;
-}
 
-.start-button:hover {
-    background-color: #d7d7d7;
-}
 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 @media (max-width: 600px) {
-    .form-container {
-        padding: 15px;
-    }
 
     label {
         font-size: 1em;
@@ -81,5 +69,6 @@ button:hover {
     .start-button {
         font-size: 1em;
         padding: 12px;
+
     }
 }
