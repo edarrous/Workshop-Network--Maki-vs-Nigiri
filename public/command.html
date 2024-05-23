@@ -6,6 +6,7 @@
 	<title>Maki vs Nigiri</title>
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="jquery"></script>
+	<link rel="stylesheet" href="/styles/command.css">
 	<script>
 		$(function () {
 		  var socket = io();
@@ -49,40 +50,41 @@
 			  return false;
 		  });
 	  
-		  socket.on('chat', function(data){
-			$('#messages').append($('<li>').text("user#" + data.id + ": " + data.msg));
-		  });
+		//   socket.on('chat', function(data){
+		// 	$('#messages').append($('<li>').text("user#" + data.id + ": " + data.msg));
+		//   });
 		});
 	  </script>
 </head>
 
 
 <body>
+	<div class="container">
+		<div class="left-button">
+			<form action="" id="jump">
+			<input type="submit" value="jump" class="action-button"/>
+			</form>
+		</div>
 
-<form action="" id="spawn">
-  Pseudo: <input type="text" id="pseudo"><br>
-  <input type="submit" value="Spawn"/>
-</form>
 
-<form action="" id="up">
-  <input type="submit" value="up"/>
-</form>
+		<div class="dpad">
+			<form action="" id="up">
+				<input type="submit" value="up" class="dpad-button up"/>
+			</form>
 
-<form action="" id="down">
-  <input type="submit" value="down"/>
-</form>
+			<form action="" id="down">
+				<input type="submit" value="down" class="dpad-button down"/>
+			</form>
 
-<form action="" id="right">
-  <input type="submit" value="right"/>
-</form>
+			<form action="" id="right">
+				<input type="submit" value="right" class="dpad-button right"/>
+			</form>
 
-<form action="" id="left">
-  <input type="submit" value="left"/>
-</form>
+			<form action="" id="left">
+				<input type="submit" value="left" class="dpad-button left"/>
+			</form>
+		</div>
 
-<form action="" id="jump">
-  <input type="submit" value="jump"/>
-</form>
-
+	</div>
 </body>
 </html>

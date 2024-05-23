@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://rare-gallery.com/uploads/posts/585433-background-board.jpg) ;
+    font-family: Poppins, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+}
+
+.left-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.action-button {
+    width: 90px;
+    height: 90px;
+    background-color: #E77E51;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.dpad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    width: 180px;
+    height: 180px;
+}
+
+.dpad-button {
+    background-color: #FEFAE0;
+    color: #FEFAE0;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.up {
+    width: 40px;
+    height: 60px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(0 30%, 50% 0, 100% 30%, 100% 100%, 0 100%);
+}
+
+.down {
+    width: 40px;
+    height: 60px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+}
+
+.left {
+    width: 60px;
+    height: 40px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-30%);
+    clip-path: polygon(0 50%, 30% 0, 100% 0, 100% 100%, 30% 100%);
+}
+
+.right {
+    width: 60px;
+    height: 40px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-30%);
+    clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
+}
