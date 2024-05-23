@@ -22,10 +22,10 @@
             }
 
             $("#start-btn").click(function(){
-                socket.emit('start');
+                socket.emit('start',id);
             })
       
-            socket.on("start", () => {
+            socket.on("serverReady", () => {
             window.location.href = '/command.html?id='+id;
             })
         });

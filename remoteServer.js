@@ -39,33 +39,42 @@ io.on('connection', function(socket){
 	if(!adminSocket){
 		adminSocket = socket;
 		console.log("admin set");
-		io.emit("connectPlayer",1);
+		socket.emit("connectPlayer",1);
 	} else if(!j2){
 		j2 = socket;
 		console.log("j2 set");
-		io.emit("connectPlayer",2);
+		socket.emit("connectPlayer",2);
 	} else if(!j3){
 		j3 = socket;
 		console.log("j3 set");
-		io.emit("connectPlayer",3);
+		socket.emit("connectPlayer",3);
 	} else if(!j4){
 		j4 = socket;
 		console.log("j4 set");
-		io.emit("connectPlayer",4);
+		socket.emit("connectPlayer",4);
 	} else 
 		socket.emit("wait player");
 });
 
-socket.on('start', function(){
-	console.log("La partie commence");
-	io.emit("start");
+socket.on('start', function(msg){
+	const id = msg;
+	io.emit("serverReady");
+	// io.emit("connectPlayer1");
 });
 
+socket.on('playerReady',function(msg){
+	const id = msg;
+	io.emit("connectPlayer"+id);
+})
+
+socket.on('connectPlayer1', function(msg){
+	
+})
+
   socket.on('up', function(msg){
-		console.log(msg);
-		//msg = JSON.parse(msg);
-		console.log("a "+msg.pseudo+" user has pressed up");
-		io.emit("up",msg.pseudo);
+		const id = msg;
+		console.log("joueur "+id +" user has pressed up");
+		io.emit("up"+id);
   });
   
   socket.on('down', function(msg){

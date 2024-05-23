@@ -1,20 +1,27 @@
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="jquery"></script>
+
 <script>
   $(function () {
     var socket = io();
-    $('#spawn').submit(function(){
-		console.log('{pseudo:'+$('#pseudo').val()+'}');
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-      socket.emit('spawn',JSON.parse(msg));
-      return false;
-    });
+
 	
+	const baseUrl = window.location.href;
+	const splitUrl = baseUrl.split("=");
+	const id = splitUrl[1];
+
+	console.log(id);
+
+	socket.emit("playerReady",id);
+	
+	// if(id == 1){
+	// 	socket.emit(connectPlayer1);
+	// }
+
 	$('#up').submit(function(){
 		console.log("up pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('up', JSON.parse(msg));
+		socket.emit('up', id);
 		return false;
 	});
 		
