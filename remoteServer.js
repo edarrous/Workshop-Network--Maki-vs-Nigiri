@@ -20,7 +20,6 @@ let adminSocket = null;
 let j2 = null;
 let j3 = null;
 let j4 = null;
-var statePlayer = 0;
 
 io.on('connection', function(socket){
   socket.userId = userId ++;
@@ -43,9 +42,16 @@ io.on('connection', function(socket){
 		console.log("admin set");
 	} else if(!j2){
 		j2 = socket;
-		statePlayer = 2;
 		socket.emit("j2 assign");
 		console.log("j2 set");
+	} else if(!j3){
+		j3 = socket;
+		socket.emit("j3 assign");
+		console.log("j3 set");
+	} else if(!j4){
+		j4 = socket;
+		socket.emit("j4 assign");
+		console.log("j4 set");
 	}
 	//msg = JSON.parse(msg);
 	io.emit("spawn2",msg.pseudo);
