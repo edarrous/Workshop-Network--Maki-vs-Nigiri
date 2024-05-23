@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="/styles/ecranM1-attente-lancement.css">
     <link rel="stylesheet" href="style-index.css">
     <title>ecranM1-1</ecranM1-1></title>
+    <script>
+        $(function () {
+        var socket = io();
+        socket.emit("admin-ok");
+    });
+    </script>
 </head>
 
 <body>

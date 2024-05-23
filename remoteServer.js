@@ -15,36 +15,37 @@ app.get('/jquery', function(req, res){
 });
 
 var userId = 0;
-var jID = 0;
 
 let adminSocket = null;
-let unrealSocket = null;
+
 
 io.on('connection', function(socket){
   socket.userId = userId ++;
 
   console.log('a user connected, user id: ' + socket.userId);
 
-  socket.on('unreal', function(msg){
-	//msg = JSON.parse(msg);
-	console.log('unreal connected');
-});
 
   socket.on('spawn', function(msg){
 		//msg = JSON.parse(msg);
 		console.log('message from user ' + msg.pseudo);
 		io.emit("spawn",msg.pseudo);
   });
+
+  
   
   socket.on('spawn2', function(msg){
 	if(!adminSocket){
 		adminSocket = socket;
 		socket.emit("confirm admin");
+		console.log("admin set");
 	}
 	//msg = JSON.parse(msg);
 	console.log('message from user ' + msg.pseudo);
 	io.emit("spawn2",msg.pseudo);
-	io.emit(jID);
+});
+
+socket.on('admin-ok', function(msg){
+	console.log('admin ok');	
 });
 
   socket.on('up', function(msg){
