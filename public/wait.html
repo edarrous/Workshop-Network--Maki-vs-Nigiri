@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="/styles/ecranM1-attente-lancement.css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="jquery"></script>
-    <title>ecranM1-1</ecranM1-1></title>
+    <title>En attente</ecranM1-1></title>
     <script>
         $(function () {
             var socket = io();
-            // socket.emit("admin-ok");
 
             const baseUrl = window.location.href;
             const splitUrl = baseUrl.split("=");
             const id = splitUrl[1];
 
-            // alert(id);
             
             if(id == 1) {
                 $("#start-btn").removeClass("hidden");
             }
 
             $("#start-btn").click(function(){
-                alert("let's go")
+                socket.emit('start');
+            })
+      
+            socket.on("start", () => {
+            window.location.href = '/command.html?id='+id;
             })
         });
     </script>
@@ -34,7 +36,7 @@
 
     <div class="logo"></div>
     <div class="bg"></div>
-    <h1 class="text">En attente de lancement de partie </h1>
+    <h1 class="text">En attente du lancement de la partie </h1>
     <div class="loader"></div>
     <button id="start-btn" type="button" class="start-button hidden">Lancer la partie</button>
 </body>

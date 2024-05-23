@@ -56,6 +56,10 @@ io.on('connection', function(socket){
 		socket.emit("wait player");
 });
 
+socket.on('start', function(){
+	console.log("La partie commence");
+	io.emit("start");
+});
 
   socket.on('up', function(msg){
 		console.log(msg);
