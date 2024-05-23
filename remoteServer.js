@@ -35,33 +35,27 @@ io.on('connection', function(socket){
 
   
   
-  socket.on('spawn2', function(){
+  socket.on('launch', function(){
 	if(!adminSocket){
 		adminSocket = socket;
-		// socket.emit("admin assign");
+		console.log("admin set");
 		io.emit("connectPlayer",1);
 	} else if(!j2){
 		j2 = socket;
-		// socket.emit("j2 assign");
 		console.log("j2 set");
 		io.emit("connectPlayer",2);
 	} else if(!j3){
 		j3 = socket;
-		// socket.emit("j3 assign");
 		console.log("j3 set");
 		io.emit("connectPlayer",3);
 	} else if(!j4){
 		j4 = socket;
-		// socket.emit("j4 assign");
 		console.log("j4 set");
 		io.emit("connectPlayer",4);
 	} else 
 		socket.emit("wait player");
 });
 
-socket.on('admin-ok', function(msg){
-	console.log('admin ok');	
-});
 
   socket.on('up', function(msg){
 		console.log(msg);
