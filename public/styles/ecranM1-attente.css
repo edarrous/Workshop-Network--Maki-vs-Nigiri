@@ -13,6 +13,7 @@ body {
 }
 
 .text {
+    margin-top: 100px;
     color: #ffffff;
 }
 
@@ -25,25 +26,7 @@ body {
     animation: spin 1s linear infinite;
     margin: auto;
     margin-top: 50px;
-    margin-bottom: 50px;
 }
-
-button {
-    padding: 15px;
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #E77E51;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #c9c9c9;
-}
-
-
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -69,6 +52,5 @@ button:hover {
     .start-button {
         font-size: 1em;
         padding: 12px;
-
     }
 }
