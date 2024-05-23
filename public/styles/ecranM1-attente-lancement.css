@@ -39,6 +39,10 @@ button {
     transition: background-color 0.3s;
 }
 
+.hidden {
+    display: none;
+}
+
 button:hover {
     background-color: #c9c9c9;
 }

@@ -5,19 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <link rel="stylesheet" href="/styles/ecranM1-attente-lancement.css">
-    <link rel="stylesheet" href="style-index.css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="jquery"></script>
     <title>ecranM1-1</ecranM1-1></title>
     <script>
         $(function () {
             var socket = io();
-            socket.emit("admin-ok");
+            // socket.emit("admin-ok");
 
             const baseUrl = window.location.href;
             const splitUrl = baseUrl.split("=");
             const id = splitUrl[1];
-            alert(id);
+
+            // alert(id);
+            
+            if(id == 1) {
+                $("#start-btn").removeClass("hidden");
+            }
+
+            $("#start-btn").click(function(){
+                alert("let's go")
+            })
         });
     </script>
 </head>
@@ -28,6 +36,6 @@
     <div class="bg"></div>
     <h1 class="text">En attente de lancement de partie </h1>
     <div class="loader"></div>
-    <button type="button" class="start-button">Lancer la partie</button>
+    <button id="start-btn" type="button" class="start-button hidden">Lancer la partie</button>
 </body>
 </html>
