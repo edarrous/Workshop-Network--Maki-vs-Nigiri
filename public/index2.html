@@ -13,8 +13,8 @@
           $(function () {
         var socket = io();
         $('#spawn2').submit(function(){
-		    console.log('{pseudo:'+$('#pseudo2').val()+'}');
-		    var msg =  '{"pseudo":"'+$('#pseudo2').val()+'"}';
+		    console.log('{pseudo:'+$('#pseudo').val()+'}');
+		    var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
         socket.emit('spawn2',JSON.parse(msg));
         return false;
         });
@@ -29,7 +29,7 @@
 
     <div class="form-container">
         <form action="" id="spawn2">
-            <label for="pseudo">ENTRER VOTRE PSEUDO </label>
+            <label for="pseudo">ENTREZ VOTRE PSEUDO </label>
             <input type="text" id="pseudo" name="pseudo" required>
             <input type="submit" value="Lancer la partie" class="start-button"/>  
 
