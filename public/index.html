@@ -1,81 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="jquery"></script>
+    <script src="/scripts/assign-id.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style1.css">
+    <title>Maki vs Nigiri</title>
+</head>
 
-<script src="/socket.io/socket.io.js"></script>
-<script src="jquery"></script>
-<script>
-  $(function () {
-    var socket = io();
-    $('#spawn').submit(function(){
-		console.log('{pseudo:'+$('#pseudo').val()+'}');
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-      socket.emit('spawn',JSON.parse(msg));
-      return false;
-    });
-	
-	$('#up').submit(function(){
-		console.log("up pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('up', JSON.parse(msg));
-		return false;
-	});
-		
-	$('#down').submit(function(){
-		console.log("input down pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('down', JSON.parse(msg));
-		return false;
-	});
-	
-  $('#left').submit(function(){
-		console.log("input left pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('left', JSON.parse(msg));
-		return false;
-	});
-
-  $('#right').submit(function(){
-		console.log("input right pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('right', JSON.parse(msg));
-		return false;
-	});
-
-  $('#jump').submit(function(){
-		console.log("input jump pressed");
-		var msg =  '{"pseudo":"'+$('#pseudo').val()+'"}';
-		socket.emit('jump', JSON.parse(msg));
-		return false;
-	});
-
-    socket.on('chat', function(data){
-      $('#messages').append($('<li>').text("user#" + data.id + ": " + data.msg));
-    });
-  });
-</script>
 <body>
+    <div class="logo"></div>
+    <div class="bg"></div>
 
-<form action="" id="spawn">
-  Pseudo: <input type="text" id="pseudo"><br>
-  <input type="submit" value="Spawn"/>
-</form>
 
-<form action="" id="up">
-  <input type="submit" value="up"/>
-</form>
-
-<form action="" id="down">
-  <input type="submit" value="down"/>
-</form>
-
-<form action="" id="right">
-  <input type="submit" value="right"/>
-</form>
-
-<form action="" id="left">
-  <input type="submit" value="left"/>
-</form>
-
-<form action="" id="jump">
-  <input type="submit" value="jump"/>
-</form>
-
+    <div class="form-container">
+        <form action="" id="launch">
+            <input type="submit" value="Lancer la partie" class="start-button button"/>
+        </form>
+    </div>
+    
 </body>
+</html>
