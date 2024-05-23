@@ -10,16 +10,17 @@
 	<script>
 		$(function () {
 		  var socket = io();
-	  
+
+		//Récupérer l'ID
 		  const baseUrl = window.location.href;
 		  const splitUrl = baseUrl.split("=");
 		  const id = splitUrl[1];
 	  
 		  console.log(id);
-	  
+		//Connecter à un joueur
 		  socket.emit("playerReady",id);
 		  
-	  
+		//Controls
 		  $('#up').submit(function(){
 			  console.log("up pressed");
 			  socket.emit('up', id);

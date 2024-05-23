@@ -5,15 +5,18 @@ var io = require('socket.io')(http);
 
 var count = 0
 
+//Partager les dossiers
+
 app.use(express.static(__dirname + '/public'));//allows access to public directory
 
 
 app.get('/jquery', function(req, res){
 	count++;
 	res.sendFile(__dirname + '/jquery-3.6.4.min.js');
-	//
 });
 
+
+// setup des variables
 var userId = 0;
 
 let adminSocket = null;
@@ -21,12 +24,16 @@ let j2 = null;
 let j3 = null;
 let j4 = null;
 
+
+
+
+//Action à la connexion d'un socket
 io.on('connection', function(socket){
   socket.userId = userId ++;
 
   console.log('a user connected, user id: ' + socket.userId);
   
-  
+  //Définir un joueur à une connexion
   socket.on('launch', function(){
 	if(!adminSocket){
 		adminSocket = socket;
@@ -46,56 +53,65 @@ io.on('connection', function(socket){
 		socket.emit("connectPlayer",4);
 	} else 
 		socket.emit("wait player");
-});
+	});
 
-socket.on('start', function(msg){
-	const id = msg;
-	io.emit("serverReady");
-	// io.emit("connectPlayer1");
-});
 
-socket.on('playerReady',function(msg){
-	const id = msg;
-	io.emit("connectPlayer"+id);
-})
 
-socket.on('connectPlayer1', function(msg){
-	
-})
+	//démarrer le jeu
+	socket.on('start', function(msg){
+		const id = msg;
+		io.emit("serverReady");
+	});
 
-  socket.on('up', function(msg){
+	socket.on('playerReady',function(msg){
+		const id = msg;
+		io.emit("connectPlayer"+id);
+	})
+
+	socket.on('connectPlayer1', function(msg){
+		
+	})
+
+
+
+
+	// Commandes joueurs
+
+	socket.on('up', function(msg){
 		const id = msg;
 		console.log("joueur "+id +" user has pressed up");
 		io.emit("up"+id);
-  });
-  
-  socket.on('down', function(msg){
-	const id = msg;
-	console.log("joueur "+id +" user has pressed up");
-	io.emit("down"+id);
+	});
+
+	socket.on('down', function(msg){
+		const id = msg;
+		console.log("joueur "+id +" user has pressed up");
+		io.emit("down"+id);
+	});
+
+	socket.on('right', function(msg){
+		const id = msg;
+		console.log("joueur "+id +" user has pressed up");
+		io.emit("right"+id);
+	});
+
+	socket.on('left', function(msg){
+		const id = msg;
+		console.log("joueur "+id +" user has pressed up");
+		io.emit("left"+id);
+	});
+
+	socket.on('jump', function(msg){
+		const id = msg;
+		console.log("joueur "+id +" user has pressed up");
+		io.emit("jump"+id);
+	});
+
 });
 
-socket.on('right', function(msg){
-	const id = msg;
-	console.log("joueur "+id +" user has pressed up");
-	io.emit("right"+id);
-});
-
-socket.on('left', function(msg){
-	const id = msg;
-	console.log("joueur "+id +" user has pressed up");
-	io.emit("left"+id);
-});
-
-socket.on('jump', function(msg){
-	const id = msg;
-	console.log("joueur "+id +" user has pressed up");
-	io.emit("jump"+id);
-});
-
-});
 
 
+//écouter port 3000
 http.listen(3000, function(){
 	console.log('listening on *:3000');
 });
