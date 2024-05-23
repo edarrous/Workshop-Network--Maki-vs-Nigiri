@@ -8,7 +8,7 @@ $(function () {
     });
 
     socket.on("wait player", () => {
-        window.location.href = '/mince.html';
+        window.location.href = '/busy.html';
     })
 
     socket.on("connectPlayer", (e) => {
