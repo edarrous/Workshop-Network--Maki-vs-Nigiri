@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="jquery"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Attente de la prochaine partie</title>
+    <link rel="stylesheet" href="/styles/busy.css">
 </head>
 <body>
-    <h1>mince plus de place</h1>
+    <div class="container">
+        <div class="message">
+            Trop de joueurs sont déjà en train de jouer.<br>Vous devez attendre la partie suivante.
+        </div>
+    </div>
 </body>
 </html>
