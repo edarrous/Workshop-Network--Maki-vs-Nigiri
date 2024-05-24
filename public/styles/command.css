@@ -5,8 +5,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(https://rare-gallery.com/uploads/posts/585433-background-board.jpg) ;
     font-family: Poppins, sans-serif;
+
+    background-image: url(/content/fond.png);
+    background-size: cover;
+    position: relative;
 }
 
 .container {
