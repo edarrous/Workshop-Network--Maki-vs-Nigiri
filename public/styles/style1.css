@@ -16,8 +16,11 @@ body {
 
 }
 
-
-
+.centered {
+    max-width: 200px; /* Ajustez la taille maximale selon vos besoins */
+    max-height: 200px; /* Ajustez la taille maximale selon vos besoins */
+    text-align: center;
+}
 
 form {
     display: flex;
