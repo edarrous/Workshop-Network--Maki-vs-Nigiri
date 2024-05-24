@@ -105,8 +105,12 @@ io.on('connection', function(socket){
 		const id = msg;
 		console.log("joueur "+id +" user has pressed jump");
 		io.emit("jump"+id);
-	});
+	})
 
+		//Reload partie
+		socket.on('clientReload', function(){
+			io.emit("serverReload");
+		})
 });
 
 
