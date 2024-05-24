@@ -68,11 +68,6 @@ io.on('connection', function(socket){
 		io.emit("connectPlayer"+id);
 	})
 
-	socket.on('connectPlayer1', function(msg){
-		
-	})
-
-
 
 
 	// Commandes joueurs
@@ -109,6 +104,10 @@ io.on('connection', function(socket){
 
 		//Reload partie
 		socket.on('clientReload', function(){
+			adminSocket= null;
+			j2 = null;
+			j3 = null;
+			j4 = null;
 			io.emit("serverReload");
 		})
 });

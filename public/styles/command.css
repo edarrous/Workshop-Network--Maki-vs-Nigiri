@@ -26,12 +26,15 @@ body {
     align-items: center;
     flex: 1;
     background-image: url(/content/bouton-jump.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .action-button {
     opacity: 0%;
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     background-color: #E77E51;
     color: white;
     border: none;
