@@ -10,6 +10,8 @@ body {
     width: 100%;
     margin: 0;
     background-image: url(/content/fond.png);
+    background-size: cover;
+    position: relative;
 }
 
 .logo{
@@ -19,6 +21,7 @@ body {
     background-image: url(/content/logo.png);
     margin: 0;
     background-size: cover;
+    background-position: center;
 
 }
 .centered {
