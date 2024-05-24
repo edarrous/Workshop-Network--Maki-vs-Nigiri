@@ -16,14 +16,15 @@ body {
 
 .logo{
 
-    width: 8rem;
-    height: 8rem;
+    width: 12rem;
+    height: 12rem;
     background-image: url(/content/logo.png);
     margin: 0;
     background-size: cover;
     background-position: center;
 
 }
+
 .centered {
     position: absolute;
     top: 50%;
@@ -69,6 +70,10 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.p{
+    color: #fff;
 }
 
 /* the start button */
