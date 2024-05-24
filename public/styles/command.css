@@ -21,7 +21,6 @@ body {
 }
 
 .left-button {
-    opacity: 0%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +29,7 @@ body {
 }
 
 .action-button {
+    opacity: 0%;
     width: 90px;
     height: 90px;
     background-color: #E77E51;
