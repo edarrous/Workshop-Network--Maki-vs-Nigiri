@@ -1,10 +1,9 @@
 body {
-    /* margin: 0;
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; */
     font-family: Poppins, sans-serif;
 
     background-image: url(/content/fond.png);
@@ -25,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    /* flex: 1; */
     background-image: url(/content/bouton-jump.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -50,7 +49,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    flex: 1;
+    /* flex: 1; */
     width: 180px;
     height: 180px; 
     background-image: url(/content/manette.png);
@@ -64,11 +63,10 @@ body {
     border: none;
     cursor: pointer;
     position: absolute;
-
+    opacity: 25%;
 }
 
 .up {
-    opacity: 25%;
     width: 48px;
     height: 80px;
     top: 0;
@@ -78,7 +76,6 @@ body {
 }
 
 .down {
-    opacity: 25%;
     width: 48px;
     height: 80px;
     bottom: 0;
@@ -88,7 +85,6 @@ body {
 }
 
 .left {
-    opacity: 25%;
     width: 70px;
     height: 48px;
     left: 0;
@@ -98,11 +94,20 @@ body {
 }
 
 .right {
-    opacity: 25%;
     width: 70px;
     height: 48px;
     right: 0;
     top: 48%;
     transform: translateY(-30%);
     clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
+}
+
+.controller{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin: 4rem;
 }
