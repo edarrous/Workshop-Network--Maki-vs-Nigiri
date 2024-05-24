@@ -9,6 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style1.css">
     <title>En attente de partie</title>
+
+    <script>
+        var socket = io();
+
+        socket.on('serverReload', () => {
+            window.location.href = '/index.html';
+        })
+    </script>
+    
 </head>
 <body>
 
