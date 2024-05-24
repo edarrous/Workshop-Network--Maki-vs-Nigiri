@@ -17,6 +17,7 @@ body {
     background-image: url(/content/logo.png);
     margin: 0;
     background-size: cover;
+    background-position: center;
 }
 
 .text {
