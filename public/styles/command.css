@@ -25,6 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1;
+    background-image: url(/content/bouton-jump.png);
 }
 
 .action-button {
