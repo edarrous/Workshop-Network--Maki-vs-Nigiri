@@ -85,25 +85,25 @@ io.on('connection', function(socket){
 
 	socket.on('down', function(msg){
 		const id = msg;
-		console.log("joueur "+id +" user has pressed up");
+		console.log("joueur "+id +" user has pressed down");
 		io.emit("down"+id);
 	});
 
 	socket.on('right', function(msg){
 		const id = msg;
-		console.log("joueur "+id +" user has pressed up");
+		console.log("joueur "+id +" user has pressed right");
 		io.emit("right"+id);
 	});
 
 	socket.on('left', function(msg){
 		const id = msg;
-		console.log("joueur "+id +" user has pressed up");
+		console.log("joueur "+id +" user has pressed left");
 		io.emit("left"+id);
 	});
 
 	socket.on('jump', function(msg){
 		const id = msg;
-		console.log("joueur "+id +" user has pressed up");
+		console.log("joueur "+id +" user has pressed jump");
 		io.emit("jump"+id);
 	});
 
