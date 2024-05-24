@@ -11,6 +11,14 @@ body {
     
 }
 
+.logo{
+    width: 8rem;
+    height: 8rem;
+    background-image: url(/content/logo.png);
+    margin: 0;
+    background-size: cover;
+}
+
 .text {
     color: #ffffff;
 }
