@@ -5,15 +5,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     background-image: url(/content/fond.png);
+    gap: 1 rem;
     
 }
 
 .logo{
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
     background-image: url(/content/logo.png);
     margin: 0;
     background-size: cover;
