@@ -8,8 +8,15 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #582F16;
+
+    background-image: url('/content/fond.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
 }
+
+
 
 
 form {
