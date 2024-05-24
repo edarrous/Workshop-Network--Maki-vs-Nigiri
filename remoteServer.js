@@ -103,6 +103,11 @@ io.on('connection', function(socket){
 	})
 
 		//Reload partie
+		socket.on('gameFinished', function(){
+			io.emit('serverFinish');
+			console.log("jeu fini");
+		})
+
 		socket.on('clientReload', function(){
 			adminSocket= null;
 			j2 = null;

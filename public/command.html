@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/content/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="content/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="content/favicon/favicon-16x16.png">
+    <link rel="manifest" href="content/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Play ! Maki vs Nigiri</title>
@@ -54,6 +63,9 @@
 		//   socket.on('chat', function(data){
 		// 	$('#messages').append($('<li>').text("user#" + data.id + ": " + data.msg));
 		//   });
+		socket.on("serverFinish", () => {
+            window.location.href = '/finish.html';
+		})
 		});
 	  </script>
 </head>
