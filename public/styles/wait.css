@@ -112,6 +112,41 @@ button:hover {
 }
 
 @media (max-width: 400px) {
-font-size: 12px;
+    body {
+        font-size: 12px;
+    }
+
+/* 
+label {
+    font-size: 1em;
+}
+
+input {
+    font-size: 1em;
+    padding: 12px;
+}
+
+button {
+    font-size: 1em;
+    padding: 12px;
+}
+
+.start-button {
+    font-size: 1em;
+    padding: 12px;
+
+}
+
+.wait-section{
+    gap: 0.5rem;
+}
+.loader{
+    width: 32px;
+    height: 32px;
+}
+.logo{
+    width: 8rem;
+    height: 8rem;
+} */
 
 }
