@@ -6,9 +6,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
     margin: 0;
     background-image: url(/content/fond.png);
     gap: 1 rem;
+    background-size: cover;
     
 }
 
