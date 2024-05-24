@@ -33,8 +33,8 @@ body {
 
 .action-button {
     opacity: 0%;
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     background-color: #E77E51;
     color: white;
     border: none;
@@ -50,8 +50,8 @@ body {
     align-items: center;
     position: relative;
     /* flex: 1; */
-    width: 180px;
-    height: 180px; 
+    width: 220px;
+    height: 220px; 
     background-image: url(/content/manette.png);
     background-size: cover;
     background-position: center;
@@ -63,13 +63,13 @@ body {
     border: none;
     cursor: pointer;
     position: absolute;
-    opacity: 25%;
+    opacity: 0%;
 }
 
 .up {
     width: 48px;
     height: 80px;
-    top: 0;
+    top: 5%;
     left: 48%;
     transform: translateX(-50%);
     clip-path: polygon(0 30%, 50% 0, 100% 30%, 100% 100%, 0 100%);
@@ -78,25 +78,25 @@ body {
 .down {
     width: 48px;
     height: 80px;
-    bottom: 0;
+    bottom: 5%;
     left: 48%;
     transform: translateX(-50%);
     clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
 }
 
 .left {
-    width: 70px;
+    width: 80px;
     height: 48px;
-    left: 0;
+    left: 0%;
     top: 48%;
     transform: translateY(-30%);
     clip-path: polygon(0 50%, 30% 0, 100% 0, 100% 100%, 30% 100%);
 }
 
 .right {
-    width: 70px;
+    width: 80px;
     height: 48px;
-    right: 0;
+    right: 5%;
     top: 48%;
     transform: translateY(-30%);
     clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
