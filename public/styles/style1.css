@@ -74,7 +74,7 @@ button:hover {
 }
 
 .message {
-    color: #ffffff; /* Texte blanc */
+    color: #000000; /* Texte blanc */
     font-size: 2em; /* Grosse typo */
     line-height: 1.4;
 }
