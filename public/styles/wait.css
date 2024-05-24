@@ -111,13 +111,13 @@ button:hover {
     }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 500px) {
     body {
         font-size: 12px;
     }
 
     label {
-        font-size: 0.5em;
+        font-size: 1em;
     }
 
 
@@ -133,7 +133,7 @@ button:hover {
     }
 
     .wait-section{
-        gap: 0.4rem;
+        gap: 0.5rem;
         margin-bottom: 1rem;
     }
     .loader{
@@ -142,7 +142,7 @@ button:hover {
     }
     .logo{
         width: 4rem;
-        height: 4 rem;
+        height: 4rem;
     }
 
 }
