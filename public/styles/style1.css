@@ -16,15 +16,10 @@ body {
 
 }
 
-
-.centered-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Ajustez la taille de l'image */
-    width: 100px;
-    height: 100px;
+.centered {
+    max-width: 200px; /* Ajustez la taille maximale selon vos besoins */
+    max-height: 200px; /* Ajustez la taille maximale selon vos besoins */
+    text-align: center;
 }
 
 form {
