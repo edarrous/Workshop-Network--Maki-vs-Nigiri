@@ -68,7 +68,7 @@ button:hover {
 
 @media (max-width: 600px) {
     .form-container {
-        padding: 15px;
+        padding: 5px;
     }
 
     label {
