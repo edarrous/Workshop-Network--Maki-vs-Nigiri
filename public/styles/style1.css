@@ -17,7 +17,15 @@ body {
 }
 
 
-
+.centered-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Ajustez la taille de l'image */
+    width: 100px;
+    height: 100px;
+}
 
 form {
     display: flex;
