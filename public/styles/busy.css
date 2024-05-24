@@ -6,10 +6,21 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #582F16; /* Couleur marron */
     font-family: Arial, sans-serif;
+    background-image: url(/content/fond.png);
+    background-size: cover;
+    position: relative;
 }
 
+
+.logo{
+    width: 12rem;
+    height: 12rem;
+    background-image: url(/content/logo.png);
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+}
 .container {
     display: flex;
     justify-content: center;
