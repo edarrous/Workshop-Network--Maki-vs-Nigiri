@@ -116,37 +116,36 @@ button:hover {
         font-size: 12px;
     }
 
-/* 
-label {
-    font-size: 1em;
-}
+    label {
+        font-size: 1em;
+    }
 
-input {
-    font-size: 1em;
-    padding: 12px;
-}
+    input {
+        font-size: 1em;
+        padding: 12px;
+    }
 
-button {
-    font-size: 1em;
-    padding: 12px;
-}
+    button {
+        font-size: 1em;
+        padding: 12px;
+    }
 
-.start-button {
-    font-size: 1em;
-    padding: 12px;
+    .start-button {
+        font-size: 1em;
+        padding: 12px;
 
-}
+    }
 
-.wait-section{
-    gap: 0.5rem;
-}
-.loader{
-    width: 32px;
-    height: 32px;
-}
-.logo{
-    width: 8rem;
-    height: 8rem;
-} */
+    .wait-section{
+        gap: 0.5rem;
+    }
+    .loader{
+        width: 32px;
+        height: 32px;
+    }
+    .logo{
+        width: 8rem;
+        height: 8rem;
+    }
 
 }
