@@ -1,19 +1,25 @@
 body {
    
     font-family: Arial, sans-serif;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #582F16;
+    background-image: url(/content/fond.png);
     
 }
 
 .text {
     color: #ffffff;
+}
+
+.wait-section{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
 }
 
 .loader {
@@ -54,7 +60,7 @@ button:hover {
     100% { transform: rotate(360deg); }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     label {
         font-size: 1em;
@@ -74,5 +80,13 @@ button:hover {
         font-size: 1em;
         padding: 12px;
 
+    }
+
+    .wait-section{
+        gap: 1rem;
+    }
+    .loader{
+        width: 32px;
+        height: 32px;
     }
 }
