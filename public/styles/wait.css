@@ -26,6 +26,9 @@ body {
 
 .text {
     color: #ffffff;
+    margin: 0;
+    width: auto;
+    height: auto;
 }
 
 .wait-section{
@@ -106,4 +109,9 @@ button:hover {
         width: 8rem;
         height: 8rem;
     }
+}
+
+@media (max-width: 400px) {
+font-size: 12px;
+
 }
